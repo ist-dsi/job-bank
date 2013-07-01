@@ -1,26 +1,22 @@
-# Dot
+# Jobbank
 
-Dot installation for IST's administrative apps.
+Jobbank is an aplication intended to reduce the gap between businesses and 
+students that are close graduationg.
 
 ---
 ## Change Logs:
 
 ### On Develop
 
-	Replaced jodafinance lib with standards lib version 1.0.0
+	Replaced jodafinance with standards lib v1.0.0
 
 
 ### v1.1.0
 
-	Updated version of fenix-framework to version 2
-
-
-### v1.0.1
-
-	Added missing data file for jodafinance lib.
+	Upgraded version of fenix-framework to v2.2.0
 
 
 ### v1.0.0
 
-	Added the following modules at version 1.0.0
+	Initial implementation.
 

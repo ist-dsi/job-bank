@@ -19,6 +19,11 @@ public class JobOfferExternal extends JobOfferExternal_Base {
         return this;
     }
 
+    @Override
+    public String getExternalLink() {
+        return super.getExternalLink().startsWith("http") ? super.getExternalLink() : "http://" + super.getExternalLink();
+    }
+
     @Deprecated
     public boolean hasExternalLink() {
         return getExternalLink() != null;

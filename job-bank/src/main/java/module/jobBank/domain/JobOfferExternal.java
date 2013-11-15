@@ -6,7 +6,15 @@ public class JobOfferExternal extends JobOfferExternal_Base {
 
     public JobOfferExternal(JobOfferBean bean) {
         setCreateJobOffer(bean);
-        setExternalLink(bean.getExternalLink());
+        if (checkHttpInLink(bean.getExternalLink()) == false) {
+            setExternalLink("http://" + bean.getExternalLink());
+        } else {
+            setExternalLink(bean.getExternalLink());
+        }
+    }
+
+    private boolean checkHttpInLink(String externalLink) {
+        return externalLink.startsWith("http");
     }
 
     @Override
@@ -21,7 +29,7 @@ public class JobOfferExternal extends JobOfferExternal_Base {
 
     @Override
     public String getExternalLink() {
-        return super.getExternalLink().startsWith("http") ? super.getExternalLink() : "http://" + super.getExternalLink();
+        return checkHttpInLink(super.getExternalLink()) ? super.getExternalLink() : "http://" + super.getExternalLink();
     }
 
     @Deprecated

@@ -1,10 +1,10 @@
 package module.jobBank.domain; 
 
-valueType pt.ist.jpdafinance.pt.EconomicActivityClassificationLeaf as EconomicActivityClassificationLeaf {
+valueType pt.ist.standards.economic.pt.EconomicActivityClassificationLeaf as EconomicActivityClassificationLeaf {
     externalizeWith {
         String exportAsString();
     }
-    internalizeWith pt.ist.jpdafinance.pt.EconomicActivityClassificationGroup.importFromString();
+    internalizeWith pt.ist.standards.economic.pt.EconomicActivityClassificationGroup.importFromString();
 }
 
 enum module.jobBank.domain.JobOfferType as JobOfferType;

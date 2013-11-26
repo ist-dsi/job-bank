@@ -10,8 +10,8 @@ import module.jobBank.domain.JobBankAccountabilityType;
 import module.jobBank.domain.JobBankSystem;
 import pt.ist.bennu.core.domain.exceptions.DomainException;
 import pt.ist.bennu.core.util.InputStreamUtil;
+import pt.ist.standards.economic.pt.EconomicActivityClassificationLeaf;
 import pt.ist.fenixframework.Atomic;
-import pt.ist.jpdafinance.pt.EconomicActivityClassificationLeaf;
 import pt.utl.ist.fenix.tools.util.ByteArray;
 import pt.utl.ist.fenix.tools.util.i18n.MultiLanguageString;
 

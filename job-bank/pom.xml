@@ -9,7 +9,7 @@
     </parent>
 
     <artifactId>job-bank</artifactId>
-    <version>1.1.0</version>
+    <version>1.1.1</version>
     <packaging>jar</packaging>
     <name>job-bank</name>
 
@@ -19,7 +19,7 @@
         <version.pt.ist.organization>1.1.0</version.pt.ist.organization>
         <version.pt.ist.email.dispatch>1.1.0</version.pt.ist.email.dispatch>
         <version.pt.ist.contacts>1.1.0</version.pt.ist.contacts>
-        <version.pt.ist.jodafinance>1.0.0</version.pt.ist.jodafinance>
+        <version.pt.ist.standards>1.0.0</version.pt.ist.standards>
     </properties>
 
     <dependencies>
@@ -50,8 +50,8 @@
         </dependency>
         <dependency>
             <groupId>pt.ist</groupId>
-            <artifactId>jodafinance</artifactId>
-            <version>${version.pt.ist.jodafinance}</version>
+            <artifactId>standards</artifactId>
+            <version>${version.pt.ist.standards}</version>
         </dependency>
         <dependency>
             <groupId>com.googlecode.json-simple</groupId>

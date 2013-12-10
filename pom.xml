@@ -10,7 +10,7 @@
 
     <artifactId>job-bank-project</artifactId>
     <name>JobBank</name>
-    <version>1.1.1</version>
+    <version>1.1.2</version>
     <packaging>pom</packaging>
 
     <scm>

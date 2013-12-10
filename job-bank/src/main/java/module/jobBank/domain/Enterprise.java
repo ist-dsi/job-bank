@@ -183,7 +183,7 @@ public class Enterprise extends Enterprise_Base {
     }
 
     public boolean isDisable() {
-        return hasActiveAccountability() && isBlocked();
+        return (hasActiveAccountability() && isBlocked()) || !hasActiveAccountability();
     }
 
     public boolean isActive() {

@@ -150,7 +150,13 @@
 			</tr> 
 			<tr> 
 				<th><bean:message key="label.enterprise.agreement.duration" bundle="JOB_BANK_RESOURCES"/>:</th> 
-				<td><bean:write name="enterprise" property="activeAccountability.beginDate"/> <bean:message key="label.to" bundle="JOB_BANK_RESOURCES"/> <bean:write name="enterprise" property="activeAccountability.endDate"/></td> 
+				<td>
+					<logic:present name="enterprise" property="activeAccountability">
+						<bean:write name="enterprise" property="activeAccountability.beginDate"/>
+						<bean:message key="label.to" bundle="JOB_BANK_RESOURCES"/>
+						<bean:write name="enterprise" property="activeAccountability.endDate"/>
+					</logic:present>
+				</td> 
 			</tr> 
 		</table> 
 	

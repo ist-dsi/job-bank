@@ -32,7 +32,7 @@ public class UpdateExpiredEnterpriseAgreementsTask extends UpdateExpiredEnterpri
         LocalDate tomorow = new LocalDate().plusDays(1);
         Collection<Enterprise> enterprises = JobBankSystem.getInstance().getEnterprises();
         for (Enterprise enterprise : enterprises) {
-            if (!enterprise.isCanceled() && !enterprise.isDisable() && !enterprise.isPendingAgreementToApprove()) {
+            if (!enterprise.isCanceled() && !enterprise.isBlocked() && !enterprise.isPendingAgreementToApprove()) {
 
                 if (expiresIn(enterprise, oneMonthFromNow) && enterprise.isJobProviderWithPrivilegesAgreement()) {// Send a warning Email
                     sendExpireWarningEmail(enterprise);

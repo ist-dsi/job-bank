@@ -264,7 +264,12 @@ public class Enterprise extends Enterprise_Base {
     public Accountability getLastAccountability() {
         Accountability lastAccountability = null;
         for (Accountability accountability : getUnit().getParentAccountabilities()) {
-            if (lastAccountability == null || accountability.getBeginDate().isAfter(lastAccountability.getBeginDate())) {
+            if (lastAccountability == null
+            		|| accountability.getBeginDate().isAfter(lastAccountability.getBeginDate())
+            		|| (accountability.getBeginDate().isEqual(lastAccountability.getBeginDate())
+            				&& (accountability.getEndDate() == null
+            					|| (lastAccountability != null
+            						&& accountability.getEndDate().isAfter(lastAccountability.getEndDate()))))){
                 lastAccountability = accountability;
             }
         }

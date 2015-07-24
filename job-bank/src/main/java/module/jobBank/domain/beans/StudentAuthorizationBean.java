@@ -14,6 +14,8 @@ import pt.ist.bennu.core.domain.User;
 import pt.ist.bennu.core.domain.util.Search;
 import pt.ist.fenixframework.Atomic;
 
+import com.google.common.base.Strings;
+
 public class StudentAuthorizationBean extends Search<StudentAuthorization> {
 
     private String username;
@@ -79,8 +81,8 @@ public class StudentAuthorizationBean extends Search<StudentAuthorization> {
             if (user != null && user.getPerson() != null && user.getPerson().getStudent() != null) {
                 return true;
             }
-            return Boolean.parseBoolean(HostSystem.getFenixJerseyClient().method("remotePerson").arg("username", getUsername())
-                    .arg("method", "hasStudent").get());
+            return !Strings.isNullOrEmpty(HostSystem.getFenixJerseyClient().method("remotePerson").arg("username", getUsername())
+                    .arg("method", "getStudent").get());
         }
         return false;
     }

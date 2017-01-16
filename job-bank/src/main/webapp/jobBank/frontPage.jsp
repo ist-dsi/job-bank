@@ -14,14 +14,6 @@
 
 	<div class="clearthis"></div>
 	
-	
-	<logic:empty name="user">
-		<% final String contextPath = request.getContextPath(); %>
-		<div id="botao" class="posicao-verde">
-			<a href="<%= contextPath %>/enterprise.do?method=termsResponsibilityEnterprise" class="botao verde"><strong><bean:message bundle="JOB_BANK_RESOURCES" key="message.frontPage.registerEnterprise"/></strong></a>
-		</div><!-- botão -->
-	</logic:empty>
-
 	<div class="hr">
 		<hr />
 	</div>
